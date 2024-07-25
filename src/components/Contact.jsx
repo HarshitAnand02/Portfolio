@@ -36,7 +36,7 @@ export const Contact = () => {
                 initial={{ x: -100, opacity: 0 }}
                 transition={{ duration: 1.0 }}
                 className='items-start gap-4'>
-                    <div className='w-full max-w-lg py-2 pr-5'>
+                    <div className='w-full max-w-lg py-2 pr-5 items-start'>
                         <div>Address: </div>
                         <div>{CONTACT.address}</div>
                     </div>
