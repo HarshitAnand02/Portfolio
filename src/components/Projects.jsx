@@ -22,10 +22,10 @@ export const Projects = () => {
                         <motion.img
                             src={project.image}
                             alt={project.title}
-                            width={150}
-                            height={150}
+                            width={200}
+                            height={200}
                             className='mb-6 rounded'
-                            whileHover={{ scale: 1.5 }}
+                            whileHover={{ scale: 2.0 }}
                             transition={{ duration: 0.3 }}
                         />
                     </motion.div>

@@ -2,9 +2,12 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import {CONTACT} from '../constants'
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
 export const Contact = () => {
     const form = useRef();
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -15,6 +18,7 @@ export const Contact = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    alert('Sent')
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -52,7 +56,7 @@ export const Contact = () => {
                 <form ref={form} onSubmit={sendEmail} className='w-1/2 max-w-lg'>
                     <div className="mb-4">
                         <label className="block text-neutral-400 mb-1">Name</label>
-                        <input className='w-full px-3 py-2 bg-black border border-neutral-300 rounded' type="text" name="from_name" />
+                        <input className='w-full px-3 py-2 bg-black border border-neutral-300 rounded' type="text" name="from_name"/>
                     </div>
                     <div className="mb-4">
                         <label className="block text-neutral-400 mb-1">Email</label>
